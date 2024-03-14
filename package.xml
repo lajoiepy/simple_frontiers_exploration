@@ -3,13 +3,10 @@
 <package format="3">
   <name>simple_frontiers_exploration</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Frontiers-based exploration compatible with nav2</description>
   <maintainer email="lajoie.py@gmail.com">lajoiepy</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
-  <test_depend>ament_copyright</test_depend>
-  <test_depend>ament_flake8</test_depend>
-  <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
 
   <export>
