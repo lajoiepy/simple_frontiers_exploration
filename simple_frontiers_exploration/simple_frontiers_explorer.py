@@ -9,9 +9,9 @@ import numpy as np
 class SimpleFrontierExplorer(Node):
     def __init__(self):
         super().__init__('simple_frontier_explorer')
-        self.odom_subscriber = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
-        self.costmap_subscriber = self.create_subscription(OccupancyGrid, '/global_costmap/costmap', self.costmap_callback, 10)
-        self.goal_publisher = self.create_publisher(PoseStamped, '/goal_pose', 10)
+        self.odom_subscriber = self.create_subscription(Odometry, 'odom', self.odom_callback, 10)
+        self.costmap_subscriber = self.create_subscription(OccupancyGrid, 'global_costmap/costmap', self.costmap_callback, 10)
+        self.goal_publisher = self.create_publisher(PoseStamped, 'goal_pose', 10)
         self.goal_timer = self.create_timer(10, self.set_next_goal)
         self.robot_position = None
         self.costmap = None
